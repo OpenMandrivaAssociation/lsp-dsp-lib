@@ -19,7 +19,7 @@ computing on several hardware architectures.
 Summary:       DSP library for signal processing (development files)
 Requires:      %{name} = %{version}
 Group:         Development/Libraries/C and C++
-BuildRequires: pkg-config
+BuildRequires: pkgconfig
 
 %description devel
 DSP library for digital signal processing (and more).
