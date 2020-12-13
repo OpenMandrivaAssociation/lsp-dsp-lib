@@ -30,7 +30,7 @@ computing on several hardware architectures.
 These are the development files for lsp-dsp-lib.
 
 %prep
-%autosetup -p1 %{name}-%{version}-src
+%autosetup -p1 %{name}-%{version}
 
 %build
 make config PREFIX=%{_prefix} LIBDIR=%{_libdir}
