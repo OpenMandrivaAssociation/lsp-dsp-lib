@@ -32,7 +32,6 @@ DSP library for digital signal processing (and more).
 
 %package -n %{devpackage}
 Summary:       DSP library for signal processing (development files)
-Requires:      %{name} = %{version}
 Group:         Development/Libraries/C and C++
 BuildRequires: pkgconfig
 Requires:	%{libpackage} = %{EVRD}
