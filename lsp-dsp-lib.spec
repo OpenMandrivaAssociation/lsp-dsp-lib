@@ -40,7 +40,6 @@ make config PREFIX=%{_prefix} LIBDIR=%{_libdir}
 %make_install
 
 %files
-%doc README.md
 %license COPYING
 %{_libdir}/*.so
 
