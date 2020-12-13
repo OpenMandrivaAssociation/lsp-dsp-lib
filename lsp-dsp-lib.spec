@@ -33,6 +33,7 @@ These are the development files for lsp-dsp-lib.
 %autosetup -p1 %{name}-%{version}
 
 %build
+make config PREFIX=%{_prefix} LIBDIR=%{_libdir}
 %make_build
 
 %install
