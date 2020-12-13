@@ -1,3 +1,5 @@
+%global debug_package %{nil}
+
 Name:          lsp-dsp-lib
 Version:       0.5.11
 Release:       1
