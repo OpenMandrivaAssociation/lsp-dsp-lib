@@ -1,5 +1,11 @@
 %global debug_package %{nil}
 
+%global debug_package %{nil}
+%define major %{nil}
+%define libpackage %mklibname lsp-dsp-lib %{major}
+%define devpackage %mklibname -d lsp-dsp-lib
+
+
 Name:          lsp-dsp-lib
 Version:       0.5.11
 Release:       1
@@ -7,7 +13,7 @@ Summary:       DSP library for signal processing
 License:       LGPL-3.0
 Group:         System/Libraries
 URL:           https://github.com/sadko4u/lsp-dsp-lib
-Source0:       https://github.com/sadko4u/lsp-dsp-lib/releases/download/0.5.11/lsp-dsp-lib-0.5.11-src.tar.gz
+Source0:       https://github.com/sadko4u/lsp-dsp-lib/releases/download/%{version}/%{name}-%{version}-src.tar.gz
 
 BuildRequires: make
 
@@ -17,13 +23,21 @@ DSP library for digital signal processing (and more).
 This library provides set of functions that perform SIMD-optimized 
 computing on several hardware architectures.
 
-%package devel
+%package -n %{libpackage}
+Summary:	DSP library for digital signal processing (and more).
+Group:		System/Libraries
+
+%description -n %{libpackage}
+DSP library for digital signal processing (and more).
+
+%package -n %{devpackage}
 Summary:       DSP library for signal processing (development files)
 Requires:      %{name} = %{version}
 Group:         Development/Libraries/C and C++
 BuildRequires: pkgconfig
+Requires:	%{libpackage} = %{EVRD}
 
-%description devel
+%description -n %{devpackage}
 DSP library for digital signal processing (and more).
 
 This library provides set of functions that perform SIMD-optimized 
@@ -41,11 +55,11 @@ make config PREFIX=%{_prefix} LIBDIR=%{_libdir}
 %install
 %make_install
 
-%files
+%files -n %{libpackage}
 %license COPYING
 %{_libdir}/*.so
 
-%files devel
+%files -n %{devpackage}
 %{_libdir}/*.a
 %{_includedir}/lsp-plug.in
 %dir %{_libdir}/pkgconfig
