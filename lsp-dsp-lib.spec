@@ -5,7 +5,7 @@ Summary:       DSP library for signal processing
 License:       LGPL-3.0
 Group:         System/Libraries
 URL:           https://github.com/sadko4u/lsp-dsp-lib
-Source0:       https://github.com/sadko4u/lsp-dsp-lib/archive/%{version}/%{name}-%{version}.tar.gz
+Source0:       https://github.com/sadko4u/lsp-dsp-lib/releases/download/0.5.11/lsp-dsp-lib-0.5.11-src.tar.gz
 
 BuildRequires: make
 
@@ -30,7 +30,7 @@ computing on several hardware architectures.
 These are the development files for lsp-dsp-lib.
 
 %prep
-%autosetup -p1 %{name}-%{version}
+%autosetup -p1 %{name}-%{version}-src
 
 %build
 make config PREFIX=%{_prefix} LIBDIR=%{_libdir}
