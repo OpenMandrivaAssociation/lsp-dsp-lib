@@ -51,6 +51,8 @@ These are the development files for lsp-dsp-lib.
 export CC=gcc
 export CXX=g++
 make config PREFIX=%{_prefix} LIBDIR=%{_libdir}
+CFLAGS_EXT="%{optflags}" CXXFLAGS_EXT="%{optflags}" \
+LDFLAGS="%{ldflags}" SO_FLAGS_EXT="%{ldflags}" EXE_FLAGS_EXT="%{ldflags}" \
 %make_build
 
 %install
