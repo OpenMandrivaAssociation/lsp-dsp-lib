@@ -48,6 +48,8 @@ These are the development files for lsp-dsp-lib.
 %setup -q -n %{name}
 
 %build
+export CC=gcc
+export CXX=g++
 make config PREFIX=%{_prefix} LIBDIR=%{_libdir}
 %make_build
 
