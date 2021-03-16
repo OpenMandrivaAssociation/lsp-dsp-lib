@@ -1,4 +1,5 @@
 %global debug_package %{nil}
+%define _disable_lto 1
 
 %global debug_package %{nil}
 %define major %{nil}
