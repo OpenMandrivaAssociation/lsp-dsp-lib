@@ -1,13 +1,12 @@
-%global debug_package %{nil}
-
-%global debug_package %{nil}
+#global debug_package %{nil}
+%define _empty_manifest_terminate_build 0
 %define major %{nil}
 %define libpackage %mklibname lsp-dsp-lib %{major}
 %define devpackage %mklibname -d lsp-dsp-lib
 
 
 Name:          lsp-dsp-lib
-Version:       0.5.11
+Version:       0.5.14
 Release:       1
 Summary:       DSP library for signal processing
 License:       LGPL-3.0
