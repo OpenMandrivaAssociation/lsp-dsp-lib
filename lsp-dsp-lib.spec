@@ -59,6 +59,6 @@ make config PREFIX=%{_prefix} LIBDIR=%{_libdir}
 
 %files -n %{devpackage}
 %{_libdir}/*.a
-%{_includedir}/lsp-plug.in
+#{_includedir}/lsp-plug.in
 %dir %{_libdir}/pkgconfig
 %{_libdir}/pkgconfig/lsp-dsp-lib.pc
