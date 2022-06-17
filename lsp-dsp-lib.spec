@@ -6,8 +6,8 @@
 
 
 Name:          lsp-dsp-lib
-Version:       0.5.14
-Release:       2
+Version:       1.0.1
+Release:       1
 Summary:       DSP library for signal processing
 License:       LGPL-3.0
 Group:         System/Libraries
@@ -59,6 +59,6 @@ make config PREFIX=%{_prefix} LIBDIR=%{_libdir}
 
 %files -n %{devpackage}
 %{_libdir}/*.a
-%{_includedir}/lsp-plug.in
+#{_includedir}/lsp-plug.in
 %dir %{_libdir}/pkgconfig
 %{_libdir}/pkgconfig/lsp-dsp-lib.pc
