@@ -6,7 +6,7 @@
 
 
 Name:          lsp-dsp-lib
-Version:       1.0.4
+Version:       1.0.7
 Release:       1
 Summary:       DSP library for signal processing
 License:       LGPL-3.0
